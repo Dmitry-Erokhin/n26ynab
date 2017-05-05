@@ -17,7 +17,6 @@ type Transaction struct {
 const dateLayout = "2006-01-02"
 
 func ParseCSV(in io.Reader) (result []Transaction, err error) {
-
 	r := csv.NewReader(in)
 	r.LazyQuotes = true
 

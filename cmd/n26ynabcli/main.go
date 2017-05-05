@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 	"log"
-	"github.com/Dmitry-Erokhin/GoLangUdemyCourse/n26ynab"
+	"github.com/Dmitry-Erokhin/n26ynab"
 	"fmt"
 )
 

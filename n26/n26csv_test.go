@@ -23,7 +23,9 @@ func TestParseCSV(t *testing.T) {
 		},
 	}
 
-	actual, err := ParseCSV(strings.NewReader(input))
+	r := strings.NewReader(input)
+
+	actual, err := ParseCSV(r)
 
 	if err != nil {
 		t.Error("Did not processed reading")

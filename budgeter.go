@@ -2,8 +2,8 @@ package budgeter
 
 import (
 	"io"
-	"github.com/Dmitry-Erokhin/GoLangUdemyCourse/n26ynab/n26"
-	"github.com/Dmitry-Erokhin/GoLangUdemyCourse/n26ynab/ynab"
+	"github.com/Dmitry-Erokhin/n26ynab/n26"
+	"github.com/Dmitry-Erokhin/n26ynab/ynab"
 	"log"
 )
 
