@@ -24,3 +24,5 @@ _testmain.go
 *.prof
 
 /.idea/
+/ynab.csv
+/n26.csv
