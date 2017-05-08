@@ -1,0 +1,4 @@
+Regexp,Payee,Category
+drivenow,DriveNow,Transport
+.*apotheke.*,Pharmacy,Health
+nespresso deutschland,Nespresso,Grocery

@@ -24,7 +24,8 @@ func ConvertData(r io.Reader, w io.Writer) error {
 		} else {
 			in = float32(txn.Cents) / 100
 		}
-		entries = append(entries, ynab.BudgetEntry{txn.Date, "", txn.Payee, out, in})
+		payee, _ := ynab.MatchPayee(txn.Payee)
+		entries = append(entries, ynab.BudgetEntry{txn.Date, payee, txn.Payee, out, in})
 	}
 
 	ynab.WriteCsv(entries, w)
