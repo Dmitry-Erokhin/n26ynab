@@ -12,7 +12,7 @@ import (
 
 const rcFileName = ".n26ynab.csv"
 
-var data []payeeData = loadPayeeData(getPayeeConfigPath())
+var data = loadPayeeData(getPayeeConfigPath())
 
 type payeeData struct {
 	regexp   *regexp.Regexp
@@ -71,8 +71,8 @@ func loadPayeeData(path string)  (result []payeeData) {
 func getPayeeConfigPath() string {
 	usr, err := user.Current()
 	if err != nil {
-		log.Printf("Can't determinate current user. Payee matrching would not be avaliable.")
-		return nil
+		log.Println("Can't determinate current user. Payee matching would not be avaliable.")
+		return ""
 	}
 	fmt.Println(usr.HomeDir)
 
