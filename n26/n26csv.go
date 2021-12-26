@@ -1,11 +1,11 @@
 package n26
 
 import (
-	"time"
 	"encoding/csv"
 	"io"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Transaction struct {
@@ -36,6 +36,6 @@ func ParseCSV(in io.Reader) (result []Transaction, err error) {
 func parseFields(fields []string) Transaction {
 	d, _ := time.Parse(dateLayout, strings.Trim(fields[0], " \""))
 	p := strings.Trim(fields[1], " \"")
-	c, _ := strconv.ParseFloat(strings.Trim(fields[6], " \""), 32)
+	c, _ := strconv.ParseFloat(strings.Trim(fields[5], " \""), 32)
 	return Transaction{d, p, int(c * 100)}
 }
